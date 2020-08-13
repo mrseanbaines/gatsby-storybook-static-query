@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "gatsby develop"
+  },
+  "dependencies": {
+    "@prismicio/gatsby-source-prismic-graphql": "3.6.11",
+    "gatsby": "2.24.43",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
