@@ -1,8 +1,7 @@
+import React, { FC } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import React from 'react'
-import { withPreview } from '@prismicio/gatsby-source-prismic-graphql'
 
-const Footer = ({ prismic }) => {
+const Footer: FC<any> = ({ prismic }) => {
   const data = prismic.allFooters.edges[0].node
 
   return (
@@ -33,11 +32,11 @@ const Footer = ({ prismic }) => {
 const Container = () => {
   const data = useStaticQuery(query)
 
-  return withPreview((data) => <Footer {...data} />, query)(data)
+  return <Footer {...data} />
 }
 
 const query = graphql`
-  {
+  query {
     prismic {
       allFooters(lang: "en-gb") {
         edges {

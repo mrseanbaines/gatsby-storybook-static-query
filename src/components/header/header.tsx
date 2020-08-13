@@ -1,8 +1,7 @@
 import React, { FC } from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
-import { withPreview } from '@prismicio/gatsby-source-prismic-graphql'
 
-const Header = ({ prismic }) => {
+const Header: FC<any> = ({ prismic }) => {
   const data = prismic.allHeaders.edges[0].node
 
   return (
@@ -35,12 +34,10 @@ const Header = ({ prismic }) => {
   )
 }
 
-const Container: FC = () => (
-  <StaticQuery query={`${query}`} render={withPreview((data: any) => <Header {...data} />, query)!} />
-)
+const Container: FC = () => <StaticQuery query={`${query}`} render={(data: any) => <Header {...data} />} />
 
 const query = graphql`
-  {
+  query {
     prismic {
       allHeaders(lang: "en-gb") {
         edges {

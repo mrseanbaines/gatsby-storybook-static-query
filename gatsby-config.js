@@ -1,7 +1,7 @@
 module.exports = {
   plugins: [
     {
-      resolve: '@prismicio/gatsby-source-prismic-graphql',
+      resolve: 'gatsby-source-prismic-graphql',
       options: {
         repositoryName: 'previews',
         defaultLang: 'en-gb',
