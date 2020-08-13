@@ -5,4 +5,4 @@ import Header from './header'
 
 const stories = storiesOf('Header', module)
 
-// stories.add('Default', () => <Header />)
+stories.add('Default', () => <Header />)
