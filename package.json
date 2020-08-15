@@ -6,20 +6,17 @@
     "storybook": "NODE_ENV=production start-storybook -s public -p 6006"
   },
   "dependencies": {
-    "gatsby": "2.24.43",
+    "gatsby": "2.24.47",
     "gatsby-source-prismic-graphql": "3.6.2",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "5.3.19",
-    "@storybook/addons": "5.3.19",
-    "@storybook/react": "5.3.19",
+    "@storybook/addon-actions": "6.0.10",
+    "@storybook/addons": "6.0.10",
+    "@storybook/react": "6.0.10",
     "babel-loader": "8.1.0",
     "babel-preset-gatsby": "^0.5.5",
     "babel-preset-react-app": "9.1.2"
-  },
-  "resolutions": {
-    "gatsby-source-graphql-universal": "3.3.0"
   }
 }
