@@ -3,33 +3,22 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 
-const IndexPage = (props) => {
-  const data = props.data.prismic.allHomepages.edges[0].node
+const IndexPage = ({ data }) => (
+  <Layout>
+    <h1>{data.site.siteMetadata.title}</h1>
 
-  return (
-    <Layout>
-      <h1>{data.title}</h1>
+    <p>Welcome to your new Gatsby site.</p>
+    <p>Now go build something great.</p>
 
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
-
-      <Link to={`/page-2`}>Go to page 2</Link>
-    </Layout>
-  )
-}
+    <Link to={`/page-2`}>Go to page 2</Link>
+  </Layout>
+)
 
 export const query = graphql`
-  query($lang: String!) {
-    prismic {
-      allHomepages(lang: $lang) {
-        edges {
-          node {
-            _meta {
-              lang
-            }
-            title
-          }
-        }
+  query {
+    site {
+      siteMetadata {
+        siteName
       }
     }
   }
