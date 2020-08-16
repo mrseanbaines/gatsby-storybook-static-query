@@ -1,7 +1,7 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
 
-const Header: FC<any> = ({ data }) => (
+const Header = ({ data }) => (
   <header
     style={{
       background: `rebeccapurple`,
@@ -30,7 +30,7 @@ const Header: FC<any> = ({ data }) => (
   </header>
 )
 
-const Container: FC = () => <StaticQuery query={`${query}`} render={(data: any) => <Header {...data} />} />
+const Container = () => <StaticQuery query={`${query}`} render={(data) => <Header {...data} />} />
 
 const query = graphql`
   query {
